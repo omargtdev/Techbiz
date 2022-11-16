@@ -1,0 +1,63 @@
+.up_text{
+    padding: .3rem 1rem;
+    border: 1px solid #ffffff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 0;
+    display: inline-block;
+    border-radius: 5px;
+}
+.carousel-item{
+    max-height: 500px;
+}
+.carousel-caption{
+    right: 100px !important;
+    top: 50%;
+    text-align: initial;
+    transform: translateY(-50%);
+    padding: 0;
+    bottom: auto;
+}
+.carousel-item img{
+    animation-duration: 6s;
+  animation-name: zoom;
+}
+.carousel-caption h5{
+    font-size: 2.3rem;
+    font-weight: 800;
+    width: 50%;
+    padding: 30px 0;
+}
+.row_img{
+    display: inline-block;
+}
+.row_img a{
+    margin-right: 2rem;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 7px;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+.row_img a:first-child{
+    color: #124cb9;
+    background-color: #ffffff;
+}
+.row_img a:last-child{
+    color: #ffffff;
+    background-color: #124cb9;
+}
+.row_img a:hover{
+    color: #ffffff;
+    background-color: #202020;
+}
+@keyframes zoom {
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(1.2);
+    }
+  }

@@ -1,0 +1,14 @@
+footer {
+    text-align: center;
+    background-color: var(--bg-color-light);
+    color: var(--color-secondary);
+}
+
+.copyright {
+    margin: 0;
+    padding: 25px 0;
+}
+
+.copy-link {
+    color: var(--color-white);
+}
