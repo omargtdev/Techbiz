@@ -19,10 +19,7 @@ function App(){
                 <Route path='/' element={<HomePage />}/>
                 <Route path='products'>
                     <Route index  element={<ProductsPage />} />
-                    <Route path="hardware/:id" element={<h1>Hardware</h1>} />
-                    <Route path="software/:id" element={<h1>Software</h1>} />
-                    <Route path="bootcamps/:id" element={<h1>Bootcamps</h1>} />
-                    <Route path="consultancies/:id" element={<h1>Asesorias</h1>} />
+                    {/* <Route path="categories" element={<h1>Show categories</h1>} /> */}
                 </Route>
                 <Route path='*' element={<NotFoundPage />} />
             </Routes>

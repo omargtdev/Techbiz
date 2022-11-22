@@ -1,0 +1,8 @@
+.group-container {
+    transition: background-color .3s;
+}
+
+.group-container:hover {
+    background-color: #0d6efd;
+    cursor: pointer;
+}

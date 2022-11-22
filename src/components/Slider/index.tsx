@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import API from "../../API";
 import { Response, SliderEntity, SuccessfulResponse } from "../../entity";
+import Spinner from "../Spinner";
 
 import './styles.css'
 
 function Slider(){
 
     const [sliders, setSliders] = useState([]);
+    const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
         fetch(`${API.baseUrlTechbiz}/sliders`)
@@ -21,12 +23,13 @@ function Slider(){
                 const sliders = successRes.data.sliders;
                 if(sliders){
                     setSliders(sliders);
+                    setIsLoaded(true);
                 }
             })
             .catch(err => console.log(err));
     }, [])
 
-    return (
+    return isLoaded ? (
         <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-inner">
                 {sliders.map((slider: SliderEntity) => (
@@ -53,7 +56,7 @@ function Slider(){
                 <span className="visually-hidden">Next</span>
             </button>
         </div>
-    );
+    ) : <Spinner />;
 }
 
 export default Slider;
